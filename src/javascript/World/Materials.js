@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import FloorShadowMaterial from '../Materials/FloorShadow.js'
+//import FloorShadowMaterial from '../Materials/FloorShadow.js'
 import MatcapMaterial from '../Materials/Matcap.js'
 
 export default class Materials
@@ -22,7 +22,7 @@ export default class Materials
 
         this.setPures()
         this.setShades()
-        this.setFloorShadow()
+        //this.setFloorShadow()
     }
 
     setPures()

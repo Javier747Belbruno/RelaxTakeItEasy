@@ -53,7 +53,7 @@ export default class Floor
         this.mesh.frustumCulled = false
         this.mesh.matrixAutoUpdate = false
         this.mesh.updateMatrix()
-        this.container.add(this.mesh)
+        //this.container.add(this.mesh)
 
         // Debug
         if(this.debug)

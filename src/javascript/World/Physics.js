@@ -189,6 +189,7 @@ export default class Physics
             /**
              * Sound
              */
+            /*
             this.car.chassis.body.addEventListener('collide', (_event) =>
             {
                 if(_event.body.mass === 0)
@@ -196,7 +197,7 @@ export default class Physics
                     const relativeVelocity = _event.contact.getImpactVelocityAlongNormal()
                     this.sounds.play('carHit', relativeVelocity)
                 }
-            })
+            })*/
 
             /**
              * Vehicle
@@ -364,7 +365,7 @@ export default class Physics
 
             this.car.forwardSpeed = this.car.worldForward.dot(positionDelta)
             this.car.goingForward = this.car.forwardSpeed > 0
-
+/*
             // Updise down
             const localUp = new CANNON.Vec3(0, 0, 1)
             const worldUp = new CANNON.Vec3()
@@ -394,7 +395,7 @@ export default class Physics
                     this.car.upsideDown.state = 'watching'
                     window.clearTimeout(this.car.upsideDown.pendingTimeout)
                 }
-            }
+            }*/
 
             // Update wheel bodies
             for(let i = 0; i < this.car.vehicle.wheelInfos.length; i++)

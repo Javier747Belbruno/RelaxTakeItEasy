@@ -87,7 +87,7 @@ export default class Objects
 
                     return mesh
                 }
-            },
+            }/*,
 
             // Floor
             {
@@ -106,11 +106,11 @@ export default class Objects
                     mesh.matrixAutoUpdate = false
                     mesh.updateMatrix()
 
-                    this.floorShadows.push(mesh)
+                    //this.floorShadows.push(mesh)
 
                     return mesh
                 }
-            }
+            }*/
         ]
 
         // Default
@@ -327,14 +327,14 @@ export default class Objects
                 this.sounds.play(_options.soundName, relativeVelocity)
             })
         }
-
+/*
         // Shadow
         // Add shadow
         if(_options.shadow)
         {
             this.shadows.add(object.container, _options.shadow)
         }
-
+*/
         // Time tick event
         if(_options.mass > 0)
         {

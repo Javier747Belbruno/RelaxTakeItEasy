@@ -86,7 +86,7 @@ export default class Car
 
             this.movement.localSpeed = this.movement.speed.clone().applyAxisAngle(new THREE.Vector3(0, 0, 1), - this.chassis.object.rotation.z)
             this.movement.localAcceleration = this.movement.acceleration.clone().applyAxisAngle(new THREE.Vector3(0, 0, 1), - this.chassis.object.rotation.z)
-
+/*
             // Sound
             this.sounds.engine.speed = this.movement.localSpeed.x
             this.sounds.engine.acceleration = this.controls.actions.up ? (this.controls.actions.boost ? 1 : 0.5) : 0
@@ -94,7 +94,7 @@ export default class Car
             if(this.movement.localAcceleration.x > 0.01)
             {
                 this.sounds.play('screech')
-            }
+            }*/
         })
     }
 
@@ -107,7 +107,7 @@ export default class Car
         this.chassis.oldPosition = this.chassis.object.position.clone()
         this.container.add(this.chassis.object)
 
-        this.shadows.add(this.chassis.object, { sizeX: 3, sizeY: 2, offsetZ: 0.2 })
+        //this.shadows.add(this.chassis.object, { sizeX: 3, sizeY: 2, offsetZ: 0.2 })
 
         // Time tick
         this.time.on('tick', () =>
@@ -347,7 +347,7 @@ export default class Car
                 }, this.klaxon.waitDuration)
 
                 this.physics.car.jump(false, 20)
-                this.sounds.play(Math.random() < 0.002 ? 'carHorn2' : 'carHorn1')
+                //this.sounds.play(Math.random() < 0.002 ? 'carHorn2' : 'carHorn1')
             }
 
             // Rain horns

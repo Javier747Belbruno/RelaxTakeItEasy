@@ -195,7 +195,7 @@ export default class Area extends EventEmitter
         }
 
         // Play sound
-        this.sounds.play('uiArea')
+        //this.sounds.play('uiArea')
 
         this.trigger('interact')
     }

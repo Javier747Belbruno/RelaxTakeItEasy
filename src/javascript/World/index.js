@@ -1,28 +1,29 @@
 import * as THREE from 'three'
 import Materials from './Materials.js'
 import Floor from './Floor.js'
-import Shadows from './Shadows.js'
+//import Shadows from './Shadows.js'
 import Physics from './Physics.js'
 import Zones from './Zones.js'
 import Objects from './Objects.js'
 import Car from './Car.js'
 import Areas from './Areas.js'
-import Tiles from './Tiles.js'
+//import Tiles from './Tiles.js'
 import Walls from './Walls.js'
-import IntroSection from './Sections/IntroSection.js'
-import ProjectsSection from './Sections/ProjectsSection.js'
-import CrossroadsSection from './Sections/CrossroadsSection.js'
-import InformationSection from './Sections/InformationSection.js'
-import PlaygroundSection from './Sections/PlaygroundSection.js'
-// import DistinctionASection from './Sections/DistinctionASection.js'
-// import DistinctionBSection from './Sections/DistinctionBSection.js'
+//import IntroSection from './Sections/IntroSection.js'
+//import ProjectsSection from './Sections/ProjectsSection.js'
+//import CrossroadsSection from './Sections/CrossroadsSection.js'
+//import InformationSection from './Sections/InformationSection.js'
+//import PlaygroundSection from './Sections/PlaygroundSection.js'
+//import DistinctionASection from './Sections/DistinctionASection.js'
+//import DistinctionBSection from './Sections/DistinctionBSection.js'
 // import DistinctionCSection from './Sections/DistinctionCSection.js'
 // import DistinctionDSection from './Sections/DistinctionDSection.js'
+import ArenaSection from './Sections/ArenaSection.js'
 import Controls from './Controls.js'
-import Sounds from './Sounds.js'
+//import Sounds from './Sounds.js'
 import { TweenLite } from 'gsap/TweenLite'
 import { Power2 } from 'gsap/EasePack'
-import EasterEggs from './EasterEggs.js'
+//import EasterEggs from './EasterEggs.js'
 
 export default class
 {
@@ -50,7 +51,7 @@ export default class
         this.container.matrixAutoUpdate = false
 
         // this.setAxes()
-        this.setSounds()
+        //this.setSounds()
         this.setControls()
         this.setFloor()
         this.setAreas()
@@ -66,22 +67,22 @@ export default class
 
         this.setReveal()
         this.setMaterials()
-        this.setShadows()
+        //this.setShadows()
         this.setPhysics()
         this.setZones()
         this.setObjects()
         this.setCar()
         this.areas.car = this.car
-        this.setTiles()
-        this.setWalls()
+        //this.setTiles()
+        //this.setWalls()
         this.setSections()
-        this.setEasterEggs()
+        //this.setEasterEggs()
     }
 
     setReveal()
     {
         this.reveal = {}
-        this.reveal.matcapsProgress = 0
+        this.reveal.matcapsProgress = 1
         this.reveal.floorShadowsProgress = 0
         this.reveal.previousMatcapsProgress = null
         this.reveal.previousFloorShadowsProgress = null
@@ -89,9 +90,10 @@ export default class
         // Go method
         this.reveal.go = () =>
         {
+            /*
             TweenLite.fromTo(this.reveal, 3, { matcapsProgress: 0 }, { matcapsProgress: 1 })
             TweenLite.fromTo(this.reveal, 3, { floorShadowsProgress: 0 }, { floorShadowsProgress: 1, delay: 0.5 })
-            TweenLite.fromTo(this.shadows, 3, { alpha: 0 }, { alpha: 0.5, delay: 0.5 })
+            //TweenLite.fromTo(this.shadows, 3, { alpha: 0 }, { alpha: 0.5, delay: 0.5 })
 
             if(this.sections.intro)
             {
@@ -100,23 +102,23 @@ export default class
                 {
                     TweenLite.fromTo(this.sections.intro.otherInstructions.label.material, 0.3, { opacity: 0 }, { opacity: 1, delay: 0.75 })
                 }
-            }
+            }*/
 
             // Car
-            this.physics.car.chassis.body.sleep()
-            this.physics.car.chassis.body.position.set(0, 0, 12)
+            //this.physics.car.chassis.body.sleep()
+            this.physics.car.chassis.body.position.set(0, 0, 0)
 
             window.setTimeout(() =>
             {
                 this.physics.car.chassis.body.wakeUp()
-            }, 300)
-
+            }, 30)
+/*
             // Sound
             TweenLite.fromTo(this.sounds.engine.volume, 0.5, { master: 0 }, { master: 0.7, delay: 0.3, ease: Power2.easeIn })
             window.setTimeout(() =>
             {
                 this.sounds.play('reveal')
-            }, 400)
+            }, 400)*/
 
             // Controls
             if(this.controls.touch)
@@ -124,13 +126,14 @@ export default class
                 window.setTimeout(() =>
                 {
                     this.controls.touch.reveal()
-                }, 400)
+                }, 40)
             }
         }
 
         // Time tick
         this.time.on('tick',() =>
         {
+            
             // Matcap progress changed
             if(this.reveal.matcapsProgress !== this.reveal.previousMatcapsProgress)
             {
@@ -414,14 +417,23 @@ export default class
             tiles: this.tiles,
             debug: this.debugFolder
         }
+        /*
+        // // Distinction A
+       this.sections.distinctionA = new DistinctionASection({
+            ...options,
+            x: 0,
+            y: - 15
+         })
+        this.container.add(this.sections.distinctionA.container)*/
 
         // // Distinction A
-        // this.sections.distinctionA = new DistinctionASection({
-        //     ...options,
-        //     x: 0,
-        //     y: - 15
-        // })
-        // this.container.add(this.sections.distinctionA.container)
+       this.sections.arena = new ArenaSection({
+        ...options,
+        x: 0,
+        y: 0
+        })
+        this.container.add(this.sections.arena.container)
+        
 
         // // Distinction B
         // this.sections.distinctionB = new DistinctionBSection({
@@ -446,7 +458,7 @@ export default class
         //     y: 0
         // })
         // this.container.add(this.sections.distinctionD.container)
-
+        /*
         // Intro
         this.sections.intro = new IntroSection({
             ...options,
@@ -492,6 +504,7 @@ export default class
             // y: - 4
         })
         this.container.add(this.sections.playground.container)
+        */
     }
 
     setEasterEggs()

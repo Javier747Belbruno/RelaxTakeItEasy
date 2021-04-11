@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-export default class DistinctionASection
+export default class ArenaSection
 {
     constructor(_options)
     {
@@ -18,6 +18,7 @@ export default class DistinctionASection
         this.container.matrixAutoUpdate = false
 
         this.setStatic()
+        this.setBowling()
         //this.setCones()
         //this.setWall()
     }
@@ -25,9 +26,9 @@ export default class DistinctionASection
     setStatic()
     {
         this.objects.add({
-            base: this.resources.items.distinctionAStaticBase.scene,
-            collision: this.resources.items.distinctionAStaticCollision.scene,
-            floorShadowTexture: this.resources.items.distinctionAStaticFloorShadowTexture,
+            base: this.resources.items.arenaStaticBase.scene,
+            collision: this.resources.items.arenaStaticCollision.scene,
+            floorShadowTexture: this.resources.items.arenaStaticFloorShadowTexture,
             offset: new THREE.Vector3(this.x, this.y, 0),
             mass:0
         })
@@ -55,6 +56,26 @@ export default class DistinctionASection
                 soundName: 'woodHit'
             })
         }
+    }
+
+    setBowling()
+    {
+        this.bowling = {}
+        this.bowling.x = 0
+        this.bowling.y = 2
+
+
+        this.bowling.ball = this.objects.add({
+            base: this.resources.items.bowlingBallBase.scene,
+            collision: this.resources.items.bowlingBallCollision.scene,
+            offset: new THREE.Vector3(this.bowling.x - 5, this.bowling.y, 0),
+            rotation: new THREE.Euler(Math.PI * 0.5, 0, 0),
+            duplicated: true,
+            shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: - 0.15, alpha: 0.35 },
+            mass: 1,
+            soundName: 'bowlingBall'
+            // sleep: false
+        })
     }
 
     setWall()

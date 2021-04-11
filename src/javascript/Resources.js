@@ -18,7 +18,7 @@ import matcapBlueSource from '../models/matcaps/blue.png'
 import matcapYellowSource from '../models/matcaps/yellow.png'
 import matcapMetalSource from '../models/matcaps/metal.png'
 // import matcapGoldSource from '../models/matcaps/gold.png'
-
+/*
 // Intro
 import introStaticBaseSource from '../models/intro/static/base.glb'
 import introStaticCollisionSource from '../models/intro/static/collision.glb'
@@ -66,14 +66,14 @@ import introDevCollisionSource from '../models/intro/dev/collision.glb'
 import crossroadsStaticFloorShadowSource from '../models/crossroads/static/floorShadow.png'
 import crossroadsStaticBaseSource from '../models/crossroads/static/base.glb'
 import crossroadsStaticCollisionSource from '../models/crossroads/static/collision.glb'
-
+*/
 // Car default
 import carDefaultChassisSource from '../models/car/default/chassis.glb'
 import carDefaultWheelSource from '../models/car/default/wheel.glb'
 import carDefaultBackLightsBrakeSource from '../models/car/default/backLightsBrake.glb'
 import carDefaultBackLightsReverseSource from '../models/car/default/backLightsReverse.glb'
 import carDefaultAntenaSource from '../models/car/default/antena.glb'
-
+/*
 // Car cyber truck
 import carCyberTruckChassisSource from '../models/car/cyberTruck/chassis.glb'
 import carCyberTruckWheelSource from '../models/car/cyberTruck/wheel.glb'
@@ -120,20 +120,25 @@ import informationActivitiesSource from '../models/information/static/activities
 import playgroundStaticFloorShadowSource from '../models/playground/static/floorShadow.png'
 import playgroundStaticBaseSource from '../models/playground/static/base.glb'
 import playgroundStaticCollisionSource from '../models/playground/static/collision.glb'
-
+*/
 // Brick
 import brickBaseSource from '../models/brick/base.glb'
 import brickCollisionSource from '../models/brick/collision.glb'
-
+/*
 // Horn
 import hornBaseSource from '../models/horn/base.glb'
 import hornCollisionSource from '../models/horn/collision.glb'
+*/
+ // Distinction A
+ import distinctionAStaticFloorShadowSource from '../models/distinctionA/static/floorShadow.png'
+ import distinctionAStaticBaseSource from '../models/distinctionA/static/base.glb'
+ import distinctionAStaticCollisionSource from '../models/distinctionA/static/collision.glb'
 
-// // Distinction A
-// import distinctionAStaticFloorShadowSource from '../models/distinctionA/static/floorShadow.png'
-// import distinctionAStaticBaseSource from '../models/distinctionA/static/base.glb'
-// import distinctionAStaticCollisionSource from '../models/distinctionA/static/collision.glb'
-
+  // Arena
+  import arenaStaticFloorShadowSource from '../models/arena/static/floorShadow.png'
+  import arenaStaticBaseSource from '../models/arena/static/base.glb'
+  import arenaStaticCollisionSource from '../models/arena/static/collision.glb'
+/*
 // // Distinction B
 // import distinctionBStaticFloorShadowSource from '../models/distinctionB/static/floorShadow.png'
 // import distinctionBStaticBaseSource from '../models/distinctionB/static/base.glb'
@@ -143,11 +148,11 @@ import hornCollisionSource from '../models/horn/collision.glb'
 // import distinctionCStaticFloorShadowSource from '../models/distinctionC/static/floorShadow.png'
 // import distinctionCStaticBaseSource from '../models/distinctionC/static/base.glb'
 // import distinctionCStaticCollisionSource from '../models/distinctionC/static/collision.glb'
-
-// // Cone
-// import coneBaseSource from '../models/cone/base.glb'
-// import coneCollisionSource from '../models/cone/collision.glb'
-
+*/
+ // Cone
+import coneBaseSource from '../models/cone/base.glb'
+import coneCollisionSource from '../models/cone/collision.glb'
+/*
 // // Awwwards trophy
 // import awwwardsTrophyBaseSource from '../models/awwwardsTrophy/base.glb'
 // import awwwardsTrophyCollisionSource from '../models/awwwardsTrophy/collision.glb'
@@ -159,22 +164,22 @@ import webbyTrophyCollisionSource from '../models/webbyTrophy/collision.glb'
 // Lemon
 import lemonBaseSource from '../models/lemon/base.glb'
 import lemonCollisionSource from '../models/lemon/collision.glb'
-
+*/
 // Bowling ball
 import bowlingBallBaseSource from '../models/bowlingBall/base.glb'
 import bowlingBallCollisionSource from '../models/bowlingBall/collision.glb'
-
+/*
 // Bowling pin
 import bowlingPinBaseSource from '../models/bowlingPin/base.glb'
 import bowlingPinCollisionSource from '../models/bowlingPin/collision.glb'
-
+*/
 // Area
 import areaKeyEnterSource from '../models/area/keyEnter.png'
 import areaEnterSource from '../models/area/enter.png'
 import areaOpenSource from '../models/area/open.png'
 import areaResetSource from '../models/area/reset.png'
 import areaQuestionMarkSource from '../models/area/questionMark.png'
-
+/*
 // Tiles
 import tilesABaseSource from '../models/tiles/a/base.glb'
 import tilesACollisionSource from '../models/tiles/a/collision.glb'
@@ -200,7 +205,7 @@ import wig1Source from '../models/wigs/wig1.glb'
 import wig2Source from '../models/wigs/wig2.glb'
 import wig3Source from '../models/wigs/wig3.glb'
 import wig4Source from '../models/wigs/wig4.glb'
-
+*/
 export default class Resources extends EventEmitter
 {
     constructor()
@@ -226,7 +231,7 @@ export default class Resources extends EventEmitter
             { name: 'matcapYellow', source: matcapYellowSource, type: 'texture' },
             { name: 'matcapMetal', source: matcapMetalSource, type: 'texture' },
             // { name: 'matcapGold', source: matcapGoldSource, type: 'texture' },
-
+/*
             // Intro
             { name: 'introStaticBase', source: introStaticBaseSource },
             { name: 'introStaticCollision', source: introStaticCollisionSource },
@@ -274,14 +279,14 @@ export default class Resources extends EventEmitter
             { name: 'crossroadsStaticBase', source: crossroadsStaticBaseSource },
             { name: 'crossroadsStaticCollision', source: crossroadsStaticCollisionSource },
             { name: 'crossroadsStaticFloorShadow', source: crossroadsStaticFloorShadowSource, type: 'texture' },
-
+*/
             // Car default
             { name: 'carDefaultChassis', source: carDefaultChassisSource },
             { name: 'carDefaultWheel', source: carDefaultWheelSource },
             { name: 'carDefaultBackLightsBrake', source: carDefaultBackLightsBrakeSource },
             { name: 'carDefaultBackLightsReverse', source: carDefaultBackLightsReverseSource },
             { name: 'carDefaultAntena', source: carDefaultAntenaSource },
-
+/*
             // Car default
             { name: 'carCyberTruckChassis', source: carCyberTruckChassisSource },
             { name: 'carCyberTruckWheel', source: carCyberTruckWheelSource },
@@ -353,20 +358,25 @@ export default class Resources extends EventEmitter
             { name: 'playgroundStaticBase', source: playgroundStaticBaseSource },
             { name: 'playgroundStaticCollision', source: playgroundStaticCollisionSource },
             { name: 'playgroundStaticFloorShadow', source: playgroundStaticFloorShadowSource, type: 'texture' },
-
+*/
             // Brick
             { name: 'brickBase', source: brickBaseSource },
             { name: 'brickCollision', source: brickCollisionSource },
-
+/*
             // Horn
             { name: 'hornBase', source: hornBaseSource },
             { name: 'hornCollision', source: hornCollisionSource },
-
-            // // Distinction A
-            // { name: 'distinctionAStaticBase', source: distinctionAStaticBaseSource },
-            // { name: 'distinctionAStaticCollision', source: distinctionAStaticCollisionSource },
-            // { name: 'distinctionAStaticFloorShadow', source: distinctionAStaticFloorShadowSource, type: 'texture' },
-
+*/
+  /*          // // Distinction A
+            { name: 'distinctionAStaticBase', source: distinctionAStaticBaseSource },
+            { name: 'distinctionAStaticCollision', source: distinctionAStaticCollisionSource },
+            { name: 'distinctionAStaticFloorShadow', source: distinctionAStaticFloorShadowSource, type: 'texture' },
+*/
+             // // Arena
+             { name: 'arenaStaticBase', source: arenaStaticBaseSource },
+             { name: 'arenaStaticCollision', source: arenaStaticCollisionSource },
+             { name: 'arenaStaticFloorShadow', source: arenaStaticFloorShadowSource, type: 'texture' },
+/*
             // // Distinction B
             // { name: 'distinctionBStaticBase', source: distinctionBStaticBaseSource },
             // { name: 'distinctionBStaticCollision', source: distinctionBStaticCollisionSource },
@@ -376,11 +386,11 @@ export default class Resources extends EventEmitter
             // { name: 'distinctionCStaticBase', source: distinctionCStaticBaseSource },
             // { name: 'distinctionCStaticCollision', source: distinctionCStaticCollisionSource },
             // { name: 'distinctionCStaticFloorShadow', source: distinctionCStaticFloorShadowSource, type: 'texture' },
-
+*/
             // // Cone
-            // { name: 'coneBase', source: coneBaseSource },
-            // { name: 'coneCollision', source: coneCollisionSource },
-
+             { name: 'coneBase', source: coneBaseSource },
+             { name: 'coneCollision', source: coneCollisionSource },
+/*
             // // Awwwards trophy
             // { name: 'awwwardsTrophyBase', source: awwwardsTrophyBaseSource },
             // { name: 'awwwardsTrophyCollision', source: awwwardsTrophyCollisionSource },
@@ -392,21 +402,21 @@ export default class Resources extends EventEmitter
             // Lemon
             { name: 'lemonBase', source: lemonBaseSource },
             { name: 'lemonCollision', source: lemonCollisionSource },
-
+*/
             // Bownling ball
             { name: 'bowlingBallBase', source: bowlingBallBaseSource },
             { name: 'bowlingBallCollision', source: bowlingBallCollisionSource },
-
+/*
             // Bownling ball
             { name: 'bowlingPinBase', source: bowlingPinBaseSource },
             { name: 'bowlingPinCollision', source: bowlingPinCollisionSource },
-
+*/
             // Areas
             { name: 'areaKeyEnter', source: areaKeyEnterSource, type: 'texture' },
             { name: 'areaEnter', source: areaEnterSource, type: 'texture' },
             { name: 'areaOpen', source: areaOpenSource, type: 'texture' },
             { name: 'areaReset', source: areaResetSource, type: 'texture' },
-            { name: 'areaQuestionMark', source: areaQuestionMarkSource, type: 'texture' },
+            { name: 'areaQuestionMark', source: areaQuestionMarkSource, type: 'texture' }/*,
 
             // Tiles
             { name: 'tilesABase', source: tilesABaseSource },
@@ -432,7 +442,7 @@ export default class Resources extends EventEmitter
             { name: 'wig1', source: wig1Source },
             { name: 'wig2', source: wig2Source },
             { name: 'wig3', source: wig3Source },
-            { name: 'wig4', source: wig4Source }
+            { name: 'wig4', source: wig4Source }*/
         ])
 
         this.loader.on('fileEnd', (_resource, _data) =>
